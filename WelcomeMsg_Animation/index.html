@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <script src="./JS/main.js"></script>
+    <title>CSS is Awesome</title>
+</head>
+
+<body style="background-color: #282c34;color: #abb2bf;">
+    <h1>Hello World!</h1>
+    <p>And all the people of the world :)</p>
+    <hr>
+    <br>
+
+
+    <div class="flexbox-container">
+        <div class="box box-red">Felix</div>
+        <div class="box box-pink">Mark</div>
+        <div class="box box-blue">Bob</div>
+        <div class="box box-green">Jack</div>
+    </div>
+
+
+
+    <!-- <div onclick="this.classList.add('animation mySecondAnimation myThirdAnimation')" class="welcomeMsg__btn"></div> -->
+
+    <div class="welcomeMsg">
+        <p>Hello World!<br>
+            <i>And all the people of the world :)</i>
+        </p>
+
+    </div>
+    <div onclick="this.HTMLAllCollection"></div>
+    <div onclick="this.classList.add('mySecondAnimation')" class="welcomeMsg2">
+        <p>Click again :D</p>
+    </div>
+    <div onclick="this.classList.add('myThirdAnimation')" class="welcomeMsg3">One last Time!</div>
+
+
+    <script>
+        /* -------------- The first WelcomingBlock -------------- */
+        // Mano pirmas bandymas po daug tutorialų :)
+        // the back(front(?))ground element
+        const welcomeMsg = document.querySelector(".welcomeMsg");
+        // the button
+        const doAnimation = document.querySelector(".doAnimation");
+
+        // click on the Button to do the Animation
+        /* doAnimation.addEventListener("click", () => {
+            welcomeMsg.classList.add("animation");
+        }); */
+        // click on the Div Element to do the Animation
+        welcomeMsg.addEventListener("click", () => {
+            welcomeMsg.classList.add("animation");
+        });
+
+        /* -------------- The second WelcomingBlock -------------- */
+        /*  const welcomeMsg2 = document.querySelector(".welcomeMsg");
+ 
+         welcomeMsg2.addEventListener("click1", () => {
+             welcomeMsg2.classList.add("mySecondAnimation");
+         }); */
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- ctrl shift k to delete a line
+ -ctrl shit l to select all of the same
+ ctrl shift ->

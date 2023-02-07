@@ -1,0 +1,282 @@
+/* Color pallete */
+:root {
+    --color: #282c34;
+    --color: #2c313c;
+    --color: #5C6370;
+    --color: #7F848E;
+    --color: #abb2bf;
+    --color: #FFFFFF;
+    --color: #c678dd;
+    --color: #61AFEf;
+    --color: #56b6c2;
+    --color: #98c379;
+    --color: #E5C07B;
+    --color: #d19a66;
+    --color: #e06c75;
+    --color: #f44747;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* --------------------------------- The boxes/circles --------------------------------- */
+
+/* the flexbox-container */
+.flexbox-container {
+    border: 2px solid #2c313c;
+    background: rgba(44, 49, 60, 0.5);
+    width: 60rem;
+    display: flex;
+    justify-content: space-between;
+
+
+    margin: 5rem 0 0 10rem;
+}
+
+
+/* The boxes */
+.box {
+    /* box Bob position */
+    margin-left: 7rem;
+    margin-top: -3rem;
+    /* box Bob's size */
+    border: 2px solid #000;
+    border-radius: 50%;
+    width: 6.25rem;
+    aspect-ratio: 1;
+
+
+
+    /* Bob's text in box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+
+    /* grid doesn't work in flex box */
+    /* display: grid;
+    place-items: center;
+    color: #000; */
+}
+
+/* red */
+.box-red {
+    background: #f44747;
+    box-shadow: 0 0 2rem 1rem rgb(158, 0, 0),
+        0 0 3rem 1rem rgb(98, 0, 0),
+        inset 0 0 3rem 1rem rgb(98, 0, 0),
+        0 0 7rem 1rem #f00;
+}
+
+.box-red:hover {
+    animation: 3s red-box__animation ease-in infinite;
+}
+
+@keyframes red-box__animation {
+    0% {
+        background: #f44747;
+        box-shadow: 0 0 2rem 1rem rgb(158, 0, 0),
+            0 0 3rem 1rem rgb(98, 0, 0),
+            inset 0 0 3rem 1rem rgb(98, 0, 0),
+            0 0 7rem 1rem #f00;
+    }
+
+    25% {
+        background: #ff7c7c;
+        box-shadow: inset 0 0 5rem 11rem rgb(255, 0, 0),
+    }
+}
+
+/* pink */
+.box-pink {
+    background: #ef61c9;
+    box-shadow: 0 0 2rem 1rem rgb(158, 0, 158),
+        0 0 3rem 1rem rgb(95, 0, 95),
+        inset 0 0 3rem 1rem rgb(95, 0, 95),
+        0 0 7rem 1rem #f0f;
+}
+
+/* blue */
+.box-blue {
+    background: #61AFEf;
+    box-shadow: 0 0 2rem 1rem rgb(0, 158, 158),
+        0 0 3rem 1rem rgb(0, 95, 95),
+        inset 0 0 3rem 1rem rgb(0, 95, 95),
+        0 0 7rem 1rem cyan;
+}
+
+/* green */
+.box-green {
+    background: #61ef95;
+    box-shadow: 0 0 2rem 1rem rgb(0, 158, 100),
+        0 0 3rem 1rem rgb(0, 98, 40),
+        inset 0 0 3rem 1rem rgb(0, 98, 40),
+        0 0 7rem 1rem #00ff00;
+}
+
+
+
+/* --------------------------------- Welcoming screens --------------------------------- */
+
+
+/* First welcoming message __ with the animation */
+.welcomeMsg {
+    border: 2px solid #61AFEf;
+    background-color: #282c34;
+
+    position: fixed;
+    inset: 0;
+    z-index: 25;
+
+    /* text align 
+    centering text with grid*/
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    /* mouse */
+    cursor: pointer
+        /* cursor: progress; */
+}
+
+
+.animation {
+    animation: 2s animation ease-out forwards;
+}
+
+@keyframes animation {
+    1% {
+        border: 4rem solid #375979;
+        background: #253a3b;
+    }
+
+    50% {
+        background: #282c34;
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+
+    /* 
+    20% {
+        transform: rotate(740deg);
+    }
+
+    50% {
+        transform: translateX(100%) rotate(-780deg);
+        background: #282c34;
+    }
+
+    70% {
+        transform: translateX(-40%) rotate(-360deg);
+    }
+
+    100% {
+        transform: scale(200%);
+    } */
+}
+
+
+
+/* Second welcoming message __ with the animation */
+.welcomeMsg2 {
+    border: 2px solid #c678dd;
+    background: #282c34;
+
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+
+    /* centering text with flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+    /* cursor pointer */
+    cursor: pointer;
+}
+
+.mySecondAnimation {
+    animation: 1s animation2 ease-out forwards;
+}
+
+@keyframes animation2 {
+    1% {
+        border: 4rem solid #793778;
+        background: #3b253a;
+    }
+
+    50% {
+        background: #282c34;
+    }
+
+    100% {
+        transform: translateX(-100%) translateY(100%);
+    }
+}
+
+
+/* Third welcoming message __ with the animation */
+.welcomeMsg3 {
+    border: 2px solid #c678dd;
+    background: #282c34;
+
+    position: fixed;
+    inset: 0;
+    z-index: 15;
+
+    /* centering text with flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    /* cursor pointer */
+    cursor: pointer;
+}
+
+.myThirdAnimation {
+    animation: 2s animation3 ease-out forwards;
+}
+
+@keyframes animation3 {
+    1% {
+        border: 4rem solid #793737;
+        background: #3b2525;
+    }
+
+    50% {
+        background: #282c34;
+    }
+
+    100% {
+        transform: translateX(100%) translateY(-100%);
+    }
+}
+
+
+.welcomeMsg__btn {
+    border: 2px solid #00ff00;
+    background: #61ef95;
+    width: 5rem;
+    height: 5rem;
+
+    position: absolute;
+    top: 1em;
+    left: 1em;
+
+    z-index: 50;
+}
+
+/* --------------------------------- ZzzzZzZ ZZzzz --------------------------------- */

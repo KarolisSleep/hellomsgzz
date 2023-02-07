@@ -1,0 +1,111 @@
+:root {
+    --color: #282c34;
+    --color: #2c313c;
+    --color: #5C6370;
+    --color: #7F848E;
+    --color: #abb2bf;
+    --color: #FFFFFF;
+    --color: #c678dd;
+    --color: #61AFEf;
+    --color: #56b6c2;
+    --color: #98c379;
+    --color: #E5C07B;
+    --color: #d19a66;
+    --color: #e06c75;
+    --color: #f44747;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: #282c34;
+    color: #abb2bf;
+}
+
+
+
+
+
+
+/* - Container */
+.grid-layout {
+    display: flex;
+}
+
+/* - My grid containers */
+.all-grid-containers {
+    border: 2px solid #2c313c;
+    padding: 20px !important;
+    width: fit-content;
+    height: fit-content;
+}
+
+.grid-container-1 {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 25% 25% 25%;
+    /* grid-template-rows: 2fr 2fr; */
+}
+
+
+.grid-container-2 {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 150px);
+}
+
+.grid-container-3 {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px 2fr;
+}
+
+/* - My boxes */
+
+.box {
+    /* box size */
+    width: 100px;
+    height: 100px;
+
+    /* box borders*/
+    border: 1px solid white;
+    box-shadow: inset 0px 0px 0px 2px black;
+
+    /* centers text in the box*/
+    display: grid;
+    place-items: center;
+
+    /* text color */
+    color: black;
+}
+
+/* row 1 of boxes */
+div.box-row1:nth-child(1n+1) {
+    background: linear-gradient(to top left, black, red, black);
+}
+
+
+/* $n - kas antras
+   $  - nuo pirmo  */
+/* row 2 of boxes */
+div.box-row2:nth-child(1n+1) {
+    background: linear-gradient(to left, black, lime, black);
+}
+
+div.box-row2:nth-child(1n+4) {
+    background: linear-gradient(black, lime, black);
+}
+
+/* row 3 of boxes */
+div.box-row3:nth-child(1n+1) {
+    background: linear-gradient(to bottom left, black, #00f, black);
+}
+
+div.box-row3:nth-child(1n+6) {
+    background: linear-gradient(to right, black, #0ff, black);
+}
